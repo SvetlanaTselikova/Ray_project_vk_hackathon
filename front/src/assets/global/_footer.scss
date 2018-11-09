@@ -1,0 +1,16 @@
+.footer {
+  margin-top: 30px;
+  height: 40px;
+  color: white;
+  font: italic 500 15px Arial;
+  opacity: 0.8;
+  background: linear-gradient(to right, rgb(167, 133, 236) 8%,rgb(240, 126, 236) 50%, rgb(238, 171, 238) 90%);
+  position: relative;
+}
+
+.footer__copyright {
+  position: absolute;
+  left:4%;
+  top: 50%;
+  transform: translateY(-50%);
+}

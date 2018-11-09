@@ -1,0 +1,73 @@
+.container {
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+.row {
+  margin-right: -15px;
+  margin-left: -15px;
+}
+
+$number-width: (
+  1: 8.33333333%,
+  2: 16.66666667%,
+  3: 25%,
+  4: 33.33333333%,
+  5: 41.66666667%,
+  6: 50%,
+  7: 58.33333333%,
+  8: 66.66666667%,
+  9: 75%,
+  10: 83.33333333%,
+  11: 91.66666667%,
+  12: 100%
+  );
+
+@mixin col-prop {
+  padding-left: 15px;
+  padding-right: 15px;
+  box-sizing: border-box;
+}
+
+@media (min-width: 768px) {
+  .container {
+    width: 750px;
+  }
+  @each $number, $width in $number-width {
+    .col-sm-#{$number} {
+      @include col-prop;
+      float:left;
+      width: $width;
+    }
+  }
+}
+
+@media (min-width: 992px) {
+  .container {
+    width: 970px;
+  }
+
+  @each $number, $width in $number-width {
+    .col-md-#{$number} {
+      @include col-prop;
+      float:left;
+      width: $width;
+    }
+  }
+}
+
+@media (min-width: 1200px) {
+  .container {
+    width: 1170px;
+  }
+
+  @each $number, $width in $number-width {
+    .col-lg-#{$number} {
+      @include col-prop;
+      float:left;
+      width: $width;
+    }
+  }
+}

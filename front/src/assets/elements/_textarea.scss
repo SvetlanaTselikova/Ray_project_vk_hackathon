@@ -1,0 +1,27 @@
+textarea {
+	overflow: auto;
+	resize: none;
+	width: 300px;
+	height: 50px;
+	border: 1px solid #cecece;
+	padding: 8px 0 8px 10px;
+	margin: 16px;
+	background: #f6f6f6;
+	display: block;
+}
+
+textarea:disabled {
+  background: #dddddd;
+}
+
+textarea[readonly] {
+  background: #dddddd; 
+}
+
+textarea:focus {
+	background: #EED2EE;
+}
+
+textarea:invalid {
+  background: #FA8072;
+}

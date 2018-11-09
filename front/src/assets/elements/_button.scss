@@ -1,0 +1,26 @@
+button {
+  color: white;
+  text-decoration: none;
+  outline: none;
+  border-width: 2px 0;
+  border-style: solid none;
+  //transition: 0.2s;
+  padding-top: 13px;
+  padding-bottom: 13px;
+  font-size: 16px;
+  cursor: pointer;  
+}
+
+.button-reg {
+  width: 300px;
+  height: 45px;
+  border-radius: 8px;
+  background: linear-gradient(rgb(250, 135, 4), rgb(248, 156, 51) 90% ,rgb(245, 171, 86)) ;
+  margin-left:auto;
+  margin-right: auto;
+  margin-bottom: 20px;
+}
+
+.button-reg:hover {
+  background:rgb(250, 135, 4);
+}

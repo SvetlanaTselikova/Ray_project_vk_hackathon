@@ -1,0 +1,27 @@
+input {
+  width: 300px;
+  height: 35px;
+	font-size: 22px;
+  padding: 6px 0 4px 10px;
+  border: none;
+  border-bottom: 1px solid  rgb(192, 192, 181);
+  color: #4F4F4F; 
+  display: block;
+  box-sizing: border-box;
+}
+
+
+input:focus {
+  border: none;
+  border-bottom: 1px solid  rgb(250, 135, 4);
+}
+
+
+.input-block {
+  width: 300px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 30px;
+  margin-bottom: 30px;
+  text-align: left;
+}
