@@ -10,7 +10,7 @@
         </div>
         <div class='header__menu'>
           <div class='header__menu__item '>О нас</div>
-          <div class='header__menu__item '>Вход</div>
+          <router-link to='/Auth'><div class='header__menu__item '>Вход</div></router-link>
           <div class='header__menu__item'>Рэй-тамагочи</div>
           <div class='header__menu__item '>Как помочь</div>
         </div>

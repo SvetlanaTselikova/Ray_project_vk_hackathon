@@ -4,10 +4,7 @@ button {
   outline: none;
   border-width: 2px 0;
   border-style: solid none;
-  //transition: 0.2s;
-  padding-top: 13px;
-  padding-bottom: 13px;
-  font-size: 16px;
+  font-size: 18px ;
   cursor: pointer;  
 }
 
@@ -15,10 +12,10 @@ button {
   width: 300px;
   height: 45px;
   border-radius: 8px;
-  background: linear-gradient(rgb(250, 135, 4), rgb(248, 156, 51) 90% ,rgb(245, 171, 86)) ;
+  background: linear-gradient(to right,rgb(250, 135, 4), rgb(248, 156, 51) 90% ,rgb(243, 158, 60)) ;
   margin-left:auto;
   margin-right: auto;
-  margin-bottom: 20px;
+  margin-bottom: 25px;
 }
 
 .button-reg:hover {

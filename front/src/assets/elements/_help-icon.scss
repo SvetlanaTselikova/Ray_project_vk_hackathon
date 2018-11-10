@@ -1,0 +1,52 @@
+.help-icon {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  display: inline-block;
+  background: radial-gradient(circle,rgb(233, 213, 190),rgb(243, 147, 37));
+  border: solid rgb(238, 128, 2) 1px;
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  background-size: 100% 100%;
+  margin-right:20px;
+
+}
+
+.help-icon-food {
+  background-image: url('./images/food-icon.png'),radial-gradient(circle,rgb(233, 213, 190),rgb(243, 147, 37));
+}
+.help-icon-food:hover {
+  background-image: url('./images/food-icon.png'), radial-gradient(circle,rgb(224, 187, 145),rgb(238, 128, 2));
+  cursor: pointer;
+}
+.help-icon-health:hover {
+  background-image: url('./images/vacine-icon.png'), radial-gradient(circle,rgb(224, 187, 145),rgb(238, 128, 2));
+  cursor: pointer;
+}
+.help-icon-health {
+  background-image: url('./images/vacine-icon.png'),radial-gradient(circle,rgb(233, 213, 190),rgb(243, 147, 37));
+}
+
+.help-icon-toilet {
+  background-image: url('./images/tualet-icon.png'),radial-gradient(circle,rgb(233, 213, 190),rgb(243, 147, 37));
+}
+.help-icon-toilet:hover {
+  background-image: url('./images/tualet-icon.png'), radial-gradient(circle,rgb(224, 187, 145),rgb(238, 128, 2));
+  cursor: pointer;
+}
+
+.help-icon-play {
+  background-image: url('./images/icon-play.png'),radial-gradient(circle,rgb(233, 213, 190),rgb(243, 147, 37));
+}
+.help-icon-play:hover {
+  background-image: url('./images/icon-play.png'), radial-gradient(circle,rgb(224, 187, 145),rgb(238, 128, 2));
+  cursor: pointer;
+}
+
+.help-icon-walk {
+  background-image: url('./images/icon-walk.png'),radial-gradient(circle,rgb(233, 213, 190),rgb(243, 147, 37));
+}
+.help-icon-walk:hover {
+  background-image: url('./images/icon-walk.png'), radial-gradient(circle,rgb(224, 187, 145),rgb(238, 128, 2));
+  cursor: pointer;
+}

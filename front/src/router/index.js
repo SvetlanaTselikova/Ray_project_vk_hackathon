@@ -5,6 +5,7 @@ import Home from '../pages/Home.vue'
 import Account from '../pages/Account.vue'
 import Register from '../pages/Register.vue'
 import Auth from '../pages/Auth.vue'
+import PetPage from '../pages/PetPage.vue'
 
 Vue.use(Router);
 
@@ -28,15 +29,10 @@ const router = new Router({
   mode: 'history',
   routes: [
     {
-      path: '/Home',
+      path: '/',
       name: 'home',
       component: Home
       },
-    {
-      path: '/Account',
-      name: 'account',
-      component: Account
-    },
     {
       path: '/Register',
       name: 'register',
@@ -55,6 +51,11 @@ const router = new Router({
     component: Account,
     beforeEnter: ifAuthenticated,
   },  
+  {
+    path: '/PetPage',
+    name: 'PetPage',
+    component: PetPage
+  }, 
   ]
 });
 

@@ -1,81 +1,8 @@
-.pull-left {
-  float: left;
- }
-  
-.pull-right {
-  float: right;
-}
 
 .clearfix:after {
   content: '';
   display: table;
   clear: both;
-}
-  
-.margin-8 {
-  margin: 8px;
-}
-  
-.margin-16 {
-  margin: 16px;
-}
-  
-.margin-32 {
-  margin: 32px;
-}
-  
-.margin-40 {
-  margin: 40px;
-}
-  
-.margin-48 {
-  margin: 48px;
-}
-
-.padding-8 {
-  padding: 8px;
-}
-  
-.padding-16 {
-  padding: 16px;
-}
-  
-.padding-32 {
-  padding: 32px;
-}
-  
-.padding-40 {
-  padding: 40px;
-}
-  
-.padding-48 {
-  padding: 48px;
-}
-
-.absolute {
-  position: absolute;
-}
-
-.relative {
-  position: relative;
-}
-
-.fixed {
-  position: fixed;   
-}
-
-.static {
-  position: static;
-}
-
-.text-left {
-  text-align: left;
-}
-.text-right {
-  text-align: right;
-}
-.text-center {
-  text-align: center;
 }
 
 .h1 {

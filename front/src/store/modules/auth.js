@@ -28,7 +28,7 @@ const actions = {
         return new Promise((resolve, reject) => { 
           commit(AUTH_REQUEST)
           let data=JSON.stringify(user)
-          axios.post('http://localhost:3000/api/users/auth', data, {
+          axios.post('http://172.20.38.37:8080/users/auth', data, {
             headers: {
                 'Content-Type': 'application/json'
             }
