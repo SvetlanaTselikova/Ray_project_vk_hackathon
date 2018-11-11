@@ -22,10 +22,8 @@
          <div class='petPage__age'>{{pet.age}}</div>
          <br>
          <div class='petPage__block-header'>Уровень счастья:</div>
-         <div class='petPage__footPrintBlock'>
-            <div class='petPage__footPrintBlock__item petPage__footPrintBlock__item-first'> </div>
-            <div class='petPage__footPrintBlock__item petPage__footPrintBlock__item-second'> </div>
-            <div class='petPage__footPrintBlock__item petPage__footPrintBlock__item-third'> </div>
+         <div class="progress progress-happiness ">
+          <div class="progress-bar progress-bar-happiness" v-bind:style="{ 'width': width }" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="10"></div>
          </div>
          <br>
          <div class='petPage__block-header'>Описание:</div>
@@ -66,7 +64,13 @@ export default {
   
   computed:{ pet () {
     return this.$store.getters.getPetById(this.id)
-  }
+  },
+   width: function() {
+      let widthValue=this.$store.getters.getPetById(this.id).level
+      widthValue += '%';
+      
+      return  widthValue ;
+    }
 }
 }
 </script>
@@ -133,13 +137,11 @@ body {
   font-weight: 500;
   color: rgb(2, 15, 128);
   display: inline-block;
-  margin-top: 16px;
+  margin-top: 18px;
   margin-right: 10px;
 }
 
-.petPage__footPrintBlock {
-  display: inline-block;
-}
+
 .petPage__age {
   font-size: 22px;
   font-family: Arial;
@@ -147,19 +149,7 @@ body {
   display: inline-block;
   margin-top: 26px;
 }
-.petPage__footPrintBlock__item {
-  width: 30px;
-  height: 28px;
-  margin-top: 20px;
-  background-image: url('../images/footPrint.png');
-  background-repeat: no-repeat;
-  background-position: 0 0px;
-  background-size: 100% 100%;
-  display: inline-block;
-}
-.petPage__footPrintBlock__item-first {
-  background-image: url('../images/footPrintFull.png');
-}
+
 .petPage__description {
   margin-top: 18px;
   color: rgb(116, 110, 110);
@@ -197,5 +187,15 @@ body {
   align-items: center;
   margin-top: 20px;
 }
+.progress.progress-happiness {
+  margin-top:20px;
+ 
+  width: 120px;
+  height: 22px;
+  border:solid rgb(107, 105, 105) 1px;
+}
+.progress-bar.progress-bar-happiness{
 
+  background: rgb(250, 135, 4);
+}
 </style>

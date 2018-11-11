@@ -33,14 +33,16 @@ const actions = {
                 'Content-Type': 'application/json'
             }
         }).then(resp => {
-              const token = resp.data.token
+              const token = resp.data
               localStorage.setItem('user-token', token)
               axios.defaults.headers.common['Authorization'] = token
               commit(AUTH_SUCCESS, token)
-              dispatch(USER_REQUEST)
+              console.log(token)
+              //dispatch(USER_REQUEST)
               resolve(resp)
             })
           .catch(err => {
+              
             commit(AUTH_ERROR, err)
             localStorage.removeItem('user-token') 
             reject(err)

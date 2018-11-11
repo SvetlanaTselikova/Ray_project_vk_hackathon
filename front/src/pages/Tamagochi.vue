@@ -69,12 +69,12 @@
          <br>
          <div class='tamagochi__list'>
          <div class='tamagochi__help-list__header'>- Самое необходимое:</div> <div class='help-icon help-icon-food' data-toggle="modal" data-target="#eatingModal"></div>
-         <div class='help-icon help-icon-health'  ></div>
+         <div class='help-icon help-icon-health' data-toggle="modal" data-target="#hillModal"  ></div>
          </div>
           <br>
           <div class='tamagochi__list'>
          <div class='tamagochi__help-list__header'>- Прочие нужды:</div><div class='help-icon help-icon-toilet' data-toggle="modal" data-target="#gigiModal"></div>
-         <div class='help-icon help-icon-play'></div>
+         <div class='help-icon help-icon-play' data-toggle="modal" data-target="#toysModal"></div>
          <div class='help-icon help-icon-walk'></div>
           </div>
          </div>
@@ -85,27 +85,42 @@
    </div>
    <modalFeet></modalFeet>
    <modalGigi></modalGigi>
+   <modalToy></modalToy>
+   <modalHealth></modalHealth>
+   
+       
+    
   </div>
 </template>
 
 <script>
 import modalFeet from '../components/modalFeet.vue'
 import modalGigi from '../components/modalGigi.vue'
+import modalToy from '../components/modalToy.vue'
+import modalHealth from '../components/modalHealth.vue'
+
+import { mapState } from 'vuex'
 export default {
   name: 'tamagochi',
   data () {
     return {
-    
     }
   },
   components: {
     'modalFeet':modalFeet,
-    'modalGigi':modalGigi
+    'modalGigi':modalGigi,
+    'modalToy':modalToy,
+    'modalHealth':modalHealth,
+    'modalToy':modalToy
   },
   created: function () {
-    this.$store.dispatch('myPet')
-  },
+   //this.$store.dispatch('myPet')
+
   
+  },
+   
+ 
+
 }
 </script>
 

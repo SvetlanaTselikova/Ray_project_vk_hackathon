@@ -1,11 +1,11 @@
 <template>
-  	<div class='modaltoy'>
+  	<div class='modalHealth'>
  			
 		 <div class="modal fade" id="hillModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
 			<div class="modal-dialog" role="document">
 				<div class="modal-content">
 					<div class="modal-header">
-						<h5 class="modal-title">Поиграть</h5>
+						<h5 class="modal-title">Вылечить</h5>
 						<button type="button" class="close" data-dismiss="modal" aria-label="Close">
 							<span aria-hidden="true">&times;</span>
 						</button>
@@ -13,14 +13,13 @@
 					<div class="modal-body">
 						<form class="" style="">
 						  	<div class="form-group">
-										<label  for="">Купить игрушку</label>
+										<label  for="">Выбрать медицинскую помощь</label>
 										<select id="selectMedicalHelp" class="form-control" v-model="selected">
-											<option value="seaweed">Водоросли</option>
-											<option value="house">Домик</option>
-											<option value="bones">Кость</option>
-											<option value="laser">Лазер</option>
-											<option value="car">Машинка</option>
-											<option value="ball">Мячик</option>
+											
+											<option>Стерилизовать</option>
+											<option>Купить лекарства</option>
+											<option >Провести обследование</option>
+											<option >Сдать анализы</option>
 										</select>	
 										
 						  	</div>
@@ -29,7 +28,7 @@
 					</div>
 					<div class="modal-footer">
 						<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-						<button type="button" class="btn btn-primary" @click="toy">Принять</button>
+						<button type="button" class="btn btn-primary" @click="health">Принять</button>
 					</div>
 				</div>
 			</div>
@@ -39,7 +38,7 @@
  <script>
  
 export default {
-		name:'modaltoy',
+		name:'modalhealth',
 		data () {
     return {
 			selected:''
@@ -48,23 +47,22 @@ export default {
   
   props: ['types'],
 		methods : {
-    toy () {
+    health () {
 			let id
-			if(selected==='Лазер')
-			id=5
-			if(selected==='Мячик')
-			id=6
-			if(selected==='Водоросли')
-			id=7
-			if(selected==='Домик')
-			id=8
-			if(selected==='Кость')
-			id=9
+			if(selected==='Стерилизовать')
+			id=1
+			if(selected==='Купить лекарства')
+			id=2
+			if(selected==='Провести обследование')
+			id=3
+			if(selected==='Сдать анализы')
+			id=4
+		
       let act = {
 			 id:id
 			}
 			console.log(vm.selected.id)
-     this.$store.dispatch('toy',act)
+     this.$store.dispatch('health',act)
     }
   }
 

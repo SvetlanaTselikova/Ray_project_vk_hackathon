@@ -41,13 +41,13 @@ const router = new Router({
       path: '/Register',
       name: 'register',
       component: Register,
-      beforeEnter: ifNotAuthenticated
+      
     },
     {
       path: '/Auth',
       name: 'auth',
       component: Auth,
-      beforeEnter: ifNotAuthenticated
+      
     },
     {
     path: '/Account',

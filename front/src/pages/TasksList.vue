@@ -1,5 +1,8 @@
 <template>
   <div id="taskList">
+    <HeaderEl>
+    </HeaderEl>
+
     <div class='container'>
       <div class='row'>
    <div class='col-sm-9'>
@@ -22,7 +25,9 @@
 
 <script>
 import taskCard from '../components/Task.vue'
+import HeaderEl from '../components/Header.vue';
 import { mapState } from 'vuex'
+
 export default {
   name: 'taskList',
   data () {
@@ -32,7 +37,8 @@ export default {
   },
   computed: mapState({tasks: state => state.tasks.tasks}),
   components: {
-  'taskCard':taskCard
+  'taskCard':taskCard,
+  'headerEl':headerEl
   },
   created: function () {
   this.$store.dispatch('listOftasks')

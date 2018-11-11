@@ -44,7 +44,7 @@ export default {
   .petCard {
   width: 300px;
   height: 410px;
-  box-shadow: 0 0 15px rgba(0,0,0,0.5);
+  box-shadow: 0 0 5px rgba(0,0,0,0.5);
   border-radius: 10px;
   margin:20px;
   margin-bottom: 30px;
@@ -52,9 +52,10 @@ export default {
   padding-left: 15px;
   padding-right: 15px;
   position: relative;
+  background: rgb(247, 242, 242);
 }
 .petCard__image {
-  display: block;
+  display: block; 
   height: 180px;
   width: 180px;
   margin-right: auto;
@@ -129,5 +130,7 @@ export default {
   right: 0;
   background:  rgb(250, 135, 4);
   border-radius: 0 0 10px 0;
+  font-size: 17px;
+  padding: 11px 6px;
 }
 </style>
