@@ -9,10 +9,10 @@
           <br> фонд помощи бездомным животным
         </div>
         <div class='header__menu'>
-          <div class='header__menu__item '>О нас</div>
+          <a href='#about'><div class='header__menu__item '>О нас</div></a>
           <router-link to='/Auth'><div class='header__menu__item '>Вход</div></router-link>
-          <div class='header__menu__item'>Рэй-тамагочи</div>
-          <div class='header__menu__item '>Как помочь</div>
+          <a href='#play'><div class='header__menu__item'>Рэй-тамагочи</div></a>
+          <a href='#help'><div class='header__menu__item '>Как помочь</div></a>
         </div>
         </div>
           <div class='content__inf__block'>
@@ -20,11 +20,26 @@
           <div class='content__inf__item content__inf__receive'>Получай "рейчики"</div>
           <div class='content__inf__item  content__inf__pet'>Заведи собственного питомца</div>
           <div class='content__inf__item content__inf__better'>Сделай мир добрее</div>
-          <div class='content__inf__btn'>Стать помощником</div>
+          <router-link to='/Auth'><button class='content__inf__btn'>Стать помощником</button></router-link>
         </div>
         <img src='../images/main_photo.jpg' class='content__image'>
   
       </div>
+      <a name='about'><div class='h1'>О фонде</div>
+      <div class='content-about'>Благотворительный фонд помощи бездомным животным "РЭЙ" помогает 30 приютам для бездомных животных Москвы и Подмосковья, в которых содержится более 15000 собак и кошек. Мы закупаем корма и лекарства, лечим и стерилизуем животных с улиц и из приютов и, конечно же, помогаем найти им любящие семьи.
+Этим приложением мы попытались максимизировать удобство коммуникации волонтеров с приютами и упростить задачу помощи животным.</div>
+      </a>
+      <a name='play'><div class='h1'>Рэй-тамагочи</div>
+       <div class='content-about'></div></a>
+       <div class='content-about'>Давно хотели завести котенка или собачку, но родители не разрешают? Или в детстве скорее бежали домой, чтобы покормить питомца в любимой тамагочи? Но даже если вы не узнали себя, а просто не имеете возможности обзавестись домашним любимцем, то наше приложение «Тамагочи Рэй» поможет вам в исполнении давней мечты, а животным почувствовать заботу.
+Вам достаточно выбрать питомца, который вам приглянулся и нажать на кнопку «Взять опеку». Теперь вы будете получать больше очков доверия за выполнение действий с животным! Но будьте ответственны, если вы не будете несколько дней заботиться о своем питомце, то мы будем вынуждены снять вашу опеку и отнять очки доверия!</div>
+      <a name='help'><div class='h1'>Как помочь</div></a>
+       <div class='content-about'>Десятки приютов по всей стране ежедневно нуждаются в разной помощи. Сотни бездомных животных хотят почувствовать, что они кому-то нужны в этом мире!
+На этой странице вы можете найти задания от разных благотворительных организаций, от простой прогулки с животным, до помощи в переезде.
+Выполняя задания вы получаете баллы, которые повышают ваш «Уровень помощника». Чем выше это значение, тем больше к вам доверия со стороны приютов и организаторов. А самое главное, тем более ощутимый вклад в жизни питомцев вы внесли.
+Для удобства использования, вы можете выбрать приюты своего города, тип помощи, а также другие параметры задания!
+Сделаем мир лучше вместе!
+</div>
     </div>
   </layout>
   </div>
@@ -90,6 +105,7 @@ export default {
   padding-right: 24px;
   text-align: center;
   border-radius: 40px 40px 40px 40px;
+  border:none;
 }
 .content__inf__work {
   background-image: url(../images/check.png);
@@ -103,6 +119,15 @@ export default {
 }
 .content__inf__better {
   background-image: url(../images/smile.png);
+}
+.content-about {
+  text-align: center;
+  color: rgb(41, 36, 36);
+  font:  italic 300 24px Arial;
+  margin-left: 15%;
+  margin-right: 15%;
+  line-height: 1.7;
+  margin-bottom:30px;
 }
 
 </style>

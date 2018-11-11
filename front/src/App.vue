@@ -12,9 +12,8 @@ export default {
     }
   },
   created: function () {
-  localStorage.removeItem('user-token')
   if (this.$store.getters.isAuthenticated) {
-    this.$store.dispatch('USER_REQUEST')
+   // this.$store.dispatch('USER_REQUEST')
     }
   }
 }

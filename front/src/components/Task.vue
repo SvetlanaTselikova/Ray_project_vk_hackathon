@@ -1,10 +1,14 @@
 <template>
     <div class='taskCard'>
-      <div class='taskCard__header'>Передержка для кошки</div>
-      <div class='taskCard__type'></div>
-      <div class='taskCard__description'>Кошке мусе нужна временная передержка сроком на две недели</div>
-      <button class='taskCard__btn taskCard__btn-more'>Подробнее</button>
-      <button class='taskCard__btn taskCard__btn-choose'>Выбрать задание</button>
+      <div class='taskCard__header'> <slot name='name'>
+           
+          </slot></div>
+      <div class='taskCard__type' v-bind:class="{ 'taskCard__feet': type=='feet','taskCard__drive': type=='drive','taskCard__home': type=='home' }"></div>
+      <div class='taskCard__description'><slot name='description'>
+          
+          </slot></div>
+    <button class='taskCard__btn taskCard__btn-more'>Подробнее</button>
+      <button class='taskCard__btn taskCard__btn-choose'>Выполнить</button>
     </div>
 </template>
  <script>
@@ -14,20 +18,22 @@ export default {
     return {
      
     }
-  }
+  },
+  props: ['type','id']
 }
 </script>
  <style lang="scss" scoped>
  .taskCard {
   box-shadow: 0 0 15px rgba(0,0,0,0.5);
   border-radius: 10px;
-  width: 280px;
-  height: 160px;
+  width: 320px;
+  height: 200px;
   padding: 20px;
   position: relative;
+  margin:20px;
  }
  .taskCard__header {
-  font-size: 28px;
+  font-size: 24px;
   font-family: Arial;
   font-weight: 600;
   color: rgb(2, 15, 128);
@@ -37,15 +43,27 @@ export default {
  .taskCard__type {
   height: 30px;
   width: 30px;
-  background-image: url('../images/taskHome.png');
+  margin-top: 0px;
   background-repeat: no-repeat;
   background-position: 0 0;
   background-size: 100% 100%;
   float: right;
-  
+}
+.taskCard__home {
+ background-image: url('../images/taskHome.png');
+}
+.taskCard__feet {
+ height: 32px;
+ width: 32px;
+ background-image: url('../images/type_food.png');
+}
+.taskCard__drive {
+ height: 34px;
+ width: 34px;
+ background-image: url('../images/type_drive.png');
 }
  .taskCard__description {
-  margin-top: 70px;
+  margin-top: 50px;
   color: rgb(102, 98, 98);
   font: italic 500 16px Arial;
 }
@@ -53,6 +71,8 @@ export default {
   position: absolute;
   bottom: 0;
   width: 160px;
+  padding-top: 12px;
+  padding-bottom: 12px;
 }
 .taskCard__btn-more {
   left:0;

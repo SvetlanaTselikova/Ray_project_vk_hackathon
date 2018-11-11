@@ -21,7 +21,9 @@
         <div class='content' >
             <slot name='content'></slot>
         </div>
-     
+      <div class='footer'>
+          <div class='footer__copyright'>© Все права защищены. Фонд помощи бездомным животным "РЭЙ" .</div>
+        </div>
     </div>
 </template>
  <script>

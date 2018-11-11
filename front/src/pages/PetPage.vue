@@ -7,18 +7,19 @@
          <div class='petPage__photo-block'>
          <div class='petPage__photo'>
          </div>
+        
          <button class='petPage__btn-choose'> Выбрать питомца</button>
          </div>
        </div>
        <div class='col-lg-6 col-md-12'>
          <div class='petPage__inf-block'>
-           
-         <div class='petPage__header'>Альма</div>
+          
+         <div class='petPage__header'>{{pet.name}}</div>
          <div class='petPage__sex'></div>
        
          <br>
          <div class='petPage__block-header'>Возраст:</div>
-         <div class='petPage__age'>2 года</div>
+         <div class='petPage__age'>{{pet.age}}</div>
          <br>
          <div class='petPage__block-header'>Уровень счастья:</div>
          <div class='petPage__footPrintBlock'>
@@ -28,7 +29,7 @@
          </div>
          <br>
          <div class='petPage__block-header'>Описание:</div>
-                  <div class='petPage__description'>Альма — это не просто собака, а грациозная, красивая и скромная натура. Молода, стерилизована и привита, имеет ветеринарный паспорт. Рост в холке 55 см.  </div>
+                  <div class='petPage__description'>{{pet.description}}  </div>
          
    
          <div class='petPage__block-header'>Как помочь:</div>
@@ -53,12 +54,20 @@
 </template>
 
 <script>
+
 export default {
-  name: 'petPage',
+  name: 'PetPage',
   data () {
     return {
+      id:''
     }
+  },
+  created: function() {this.id= this.$route.params.id; },
+  
+  computed:{ pet () {
+    return this.$store.getters.getPetById(this.id)
   }
+}
 }
 </script>
 
@@ -94,6 +103,7 @@ body {
   padding-right: 30px;
   padding-bottom: 30px;
 }
+
 .petPage__header {
   font-size: 44px;
   font-family: Arial;
