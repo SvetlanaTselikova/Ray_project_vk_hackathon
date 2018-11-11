@@ -1,7 +1,7 @@
 <template>
   	<div class='modaltoy'>
  			
-		 <div class="modal fade" id="hillModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+		 <div class="modal fade" id="toysModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
 			<div class="modal-dialog" role="document">
 				<div class="modal-content">
 					<div class="modal-header">

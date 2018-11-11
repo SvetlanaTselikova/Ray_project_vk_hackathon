@@ -38,7 +38,7 @@ export default {
   computed: mapState({tasks: state => state.tasks.tasks}),
   components: {
   'taskCard':taskCard,
-  'headerEl':headerEl
+  'HeaderEl':HeaderEl
   },
   created: function () {
   this.$store.dispatch('listOftasks')

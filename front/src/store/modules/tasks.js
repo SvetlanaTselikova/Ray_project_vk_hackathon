@@ -12,10 +12,8 @@ const mutations = {
 
 const actions = {
     listOftasks ({commit},task) {
-      commit('listOftasks',[{name:'pupa',description:'dfd',type:'drive',id:'1'}])
-      /*
-        
-       
+    
+     
         axios.get('http://172.20.38.37:8080/tasks/all', {
             headers: {
                 'Access-Control-Allow-Origin': '*',
@@ -24,7 +22,7 @@ const actions = {
         }).then((response) =>{
           
             commit('listOftasks',response.data)
-            })*/
+            })
     }
       }
 

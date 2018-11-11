@@ -1,5 +1,6 @@
 <template>
   <div id="tamagochi">
+    <HeaderEl></HeaderEl>
    <div class='container'>
      <div class='row'>
        
@@ -98,6 +99,7 @@ import modalFeet from '../components/modalFeet.vue'
 import modalGigi from '../components/modalGigi.vue'
 import modalToy from '../components/modalToy.vue'
 import modalHealth from '../components/modalHealth.vue'
+import HeaderEl from '../components/Header.vue';
 
 import { mapState } from 'vuex'
 export default {
@@ -111,7 +113,8 @@ export default {
     'modalGigi':modalGigi,
     'modalToy':modalToy,
     'modalHealth':modalHealth,
-    'modalToy':modalToy
+    'modalToy':modalToy,
+    'HeaderEl':HeaderEl
   },
   created: function () {
    //this.$store.dispatch('myPet')

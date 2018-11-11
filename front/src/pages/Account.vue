@@ -53,7 +53,7 @@
             <div class="nav-menu col-md-3">
                 <ul class="list-group">
                     <a v-on:click="getMyTasks" class="list-group-item list-group-item-action">Мои задания</a>
-                    <a v-on:click="getMyPets" class="list-group-item list-group-item-action enabled">Мои животные</a>
+                   <router-link to='/Tamagochi'> <a v-on:click="getMyPets" class="list-group-item list-group-item-action enabled">Мои животные</a></router-link>
                 </ul>
             </div>
             

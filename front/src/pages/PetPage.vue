@@ -1,5 +1,8 @@
 <template>
   <div id="petPage">
+     <HeaderEl>
+    </HeaderEl>
+
    <div class='container'>
      <div class='row'>
        
@@ -52,7 +55,7 @@
 </template>
 
 <script>
-
+import HeaderEl from '../components/Header.vue';
 export default {
   name: 'PetPage',
   data () {
@@ -64,6 +67,9 @@ export default {
   
   computed:{ pet () {
     return this.$store.getters.getPetById(this.id)
+  },
+  components: {
+  'HeaderEl':HeaderEl
   },
    width: function() {
       let widthValue=this.$store.getters.getPetById(this.id).level

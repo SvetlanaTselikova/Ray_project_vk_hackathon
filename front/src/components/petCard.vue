@@ -68,7 +68,7 @@ export default {
 }
 
 .petCard__header {
-  font-size: 28px;
+  font-size: 24px;
   font-family: Arial;
   font-weight: 600;
   color: rgb(2, 15, 128);

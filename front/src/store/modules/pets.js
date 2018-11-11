@@ -6,15 +6,18 @@ const state = {
 
 const mutations = {
     listOfPets (state,pets) {
+      for (let i=0;i<pets.length;i++) {
+        
+       pets[i].level=80;
+      }
       state.pets=pets;
     }
 }
 
 const actions = {
     listOfPets ({commit},pet) {
-      commit('listOfPets',[{name:'pupa',description:'dfd',sex:'w',id:'1',age:'2 года',level:'80'}])
-      /*
-        
+     // commit('listOfPets',[{name:'pupa',description:'dfd',sex:'w',id:'1',age:'2 года',level:'80'}])
+      
        
         axios.get('http://172.20.38.37:8080/pets/all', {
             headers: {
@@ -24,7 +27,7 @@ const actions = {
         }).then((response) =>{
          
             commit('listOfPets',response.data)
-            })*/
+            })
     }
       }
 
